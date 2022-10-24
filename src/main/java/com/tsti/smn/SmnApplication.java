@@ -8,8 +8,7 @@ public class SmnApplication {
 	
 	public static void main(String[] args) {
 		SpringApplication.run(SmnApplication.class, args); //inicia la aplicación
-		//modificación remota 1
-		// cambio local
+		
 	}
 
 }
