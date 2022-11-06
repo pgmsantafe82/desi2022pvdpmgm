@@ -4,7 +4,6 @@ public class PersonasBuscarForm {
 //	@NotNull
 	private Long dni;
 	private String nombre;
-	private String tipoDoc;
 	private Long IdCiudadSeleccionada;
 	
 	
@@ -39,12 +38,6 @@ public class PersonasBuscarForm {
 	}
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
-	}
-	public String getTipoDoc() {
-		return tipoDoc;
-	}
-	public void setTipoDoc(String tipoDoc) {
-		this.tipoDoc = tipoDoc;
 	}
 	
 

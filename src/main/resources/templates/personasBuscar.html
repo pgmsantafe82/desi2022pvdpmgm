@@ -17,16 +17,6 @@
 <form  th:action="@{/personasBuscar}" th:object="${formBean}" method="post">
 	<table border="1" style="align-self: center;">
 		<tr>
-			<td><label  th:text="#{persona.tipoDoc}"/></td>
-            <td>
-		        <select th:field="*{tipoDoc}">
-		        	<option th:value="''" >Seleccione una Opcion</option>
-				    <option th:value="'DNI'" th:text="DNI"></option>
-				    <option th:value="'Pasaporte'" th:text="Pasaporte"></option>
-				</select>
-			</td>
-		</tr>
-        <tr>
             <td><label th:text="#{persona.dni}" /></td>
             <td><input type="number" th:field="*{dni}"  />
              
