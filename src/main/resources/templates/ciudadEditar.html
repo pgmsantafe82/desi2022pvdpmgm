@@ -17,12 +17,13 @@
 	
 	<div class="starter-template">
         <h1><span  th:text="#{empresa}" /></h1>
-        <h2>
-            <span th:text="#{ciudad.editar.titulo}"></span>
-        </h2>
+        <h2 th:text="${formBean.id} ? #{ciudad.editar.titulo}: #{ciudad.registrar.titulo}" />
+        
     </div>
     
 <form  th:action="@{/ciudadEditar}" th:object="${formBean}" method="post">
+	<p th:each="err : ${#fields.errors('global')}" th:text="${err}" class="error" />
+	<input type="hidden" id="id" th:field="*{id}">
 	<table border="0" style="align-self: center;">
 		 
         
@@ -36,7 +37,7 @@
             <td><label th:text="#{ciudad.provincia}" /></td>
             <td>
 		        <select th:field="*{idProvincia}">
-				  <option th:each="p : ${allProvincias}" 
+		          <option th:each="p : ${allProvincias}" 
 				          th:value="${p.id}" 
 				          th:text="${p.nombre}"></option>
 				</select>

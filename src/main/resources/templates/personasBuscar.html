@@ -43,8 +43,9 @@
          <tr>
             <td><label th:text="#{persona.ciudad}" /></td>
             <td>
-		        <select th:field="*{ciudadSeleccionada}">
-				  <option th:each="c : ${allCiudades}" 
+		        <select th:field="*{idCiudadSeleccionada}">
+					<option th:value="null" text="Seleccione una opción"></option>
+				    <option th:each="c : ${allCiudades}" 
 				          th:value="${c.id}" 
 				          th:text="${c.nombre}"></option>
 				</select>

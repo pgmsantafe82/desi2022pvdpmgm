@@ -2,9 +2,14 @@ package com.tsti.smn.pojos;
 
 import java.util.Date;
 
-public class Persona {
-	
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 
+@Entity
+public class Persona {
+	@Id
 	private Long dni;
 	
 	private String nombre;
@@ -13,6 +18,7 @@ public class Persona {
 	
 	private Date fechaNacimiento;
 	
+	@ManyToOne
 	private Ciudad ciudad;
 	
 	public Long getDni() {

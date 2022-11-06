@@ -29,18 +29,23 @@
 	
 	<div class="starter-template">
         <h1><span  th:text="#{empresa}" /></h1>
-        <h2>
-            <span th:text="#{persona.editar.titulo}"></span>
-        </h2>
+         <h2 th:text="${formBean.dni} ? #{persona.editar.titulo}: #{persona.registrar.titulo}" />
+        
     </div>
     
 <form  th:action="@{/personasEditar}" th:object="${formBean}" method="post">
+	<p th:each="err : ${#fields.errors('global')}" th:text="${err}" class="error" />
 	<table border="0" style="align-self: center;">
 		 
         <tr>
             <td><label th:text="#{persona.dni}" /></td>
             <td><input type="number" th:field="*{dni}" /></td>
-             <td> <p th:if="${#fields.hasErrors('dni')}" th:errorclass="error" th:errors="*{dni}" /> </td> 
+             <!--<td> <p th:if="${#fields.hasErrors('dni')}" th:errorclass="error" th:errors="*{dni}" /> </td>-->
+             <td> 
+	             <ul>
+			        <li th:each="err : ${#fields.errors('dni')}" th:text="${err}" class="error" />
+			    </ul> 
+		   	</td>
         </tr>
         <tr>
             <td><label th:text="#{persona.nombre}" /></td>

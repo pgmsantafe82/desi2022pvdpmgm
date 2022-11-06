@@ -5,29 +5,28 @@ public class PersonasBuscarForm {
 	private Long dni;
 	private String nombre;
 	private String tipoDoc;
-	private String ciudadSeleccionada;
+	private Long IdCiudadSeleccionada;
 	
 	
 //	private List<Ciudad> ciudades;
-
-	
-	public String getCiudadSeleccionada() {
-		return ciudadSeleccionada;
-	}
-	public void setCiudadSeleccionada(String ciudadSeleccionada) {
-		this.ciudadSeleccionada = ciudadSeleccionada;
-	}
 //	public List<Ciudad> getCiudades() {
 //		return ciudades;
 //	}
 //	public void setCiudades(List<Ciudad> ciudades) {
 //		this.ciudades = ciudades;
 //	}
+	
 	public Long getDni() {
 		if(dni!=null && dni>0)
 			return dni;
 		else
 			return null;
+	}
+	public Long getIdCiudadSeleccionada() {
+		return IdCiudadSeleccionada;
+	}
+	public void setIdCiudadSeleccionada(Long idCiudadSeleccionada) {
+		IdCiudadSeleccionada = idCiudadSeleccionada;
 	}
 	public void setDni(Long dni) {
 		this.dni = dni;

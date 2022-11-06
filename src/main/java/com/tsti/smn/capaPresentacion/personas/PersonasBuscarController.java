@@ -29,7 +29,7 @@ public class PersonasBuscarController {
     @RequestMapping(method=RequestMethod.GET)
     public String preparaForm(Model modelo) {
     	PersonasBuscarForm form =  new PersonasBuscarForm();
-    	form.setDni(9999999999L);
+    	form.setIdCiudadSeleccionada(1L); //Esto es por ejemplo, si quisiera setear un valor por defecto en el filtro de ciudad 
 //    	 form.setCiudades(serviceCiudad.getAll());    //  en lugar de esto hacemos @ModelAttribute("allCiudades")
        modelo.addAttribute("formBean",form);
        return "personasBuscar";

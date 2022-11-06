@@ -3,7 +3,6 @@ package com.tsti.smn.capaServicios;
 
 import java.util.List;
 
-import com.tsti.smn.pojos.Ciudad;
 import com.tsti.smn.pojos.Provincia;
 /**
  * Clase que permite gestionar la entidad Provincia en el sistema.

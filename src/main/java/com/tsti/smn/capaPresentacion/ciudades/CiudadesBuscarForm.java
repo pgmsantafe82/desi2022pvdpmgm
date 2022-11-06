@@ -2,7 +2,7 @@ package com.tsti.smn.capaPresentacion.ciudades;
 
 public class CiudadesBuscarForm {
 	private String nombre;
-	private String provinciaSeleccionada;
+	private Long provinciaSeleccionada;
 	
 	
 //	private List<Provincia> provincias;
@@ -16,10 +16,10 @@ public class CiudadesBuscarForm {
 //		this.provincias = provincias;
 //	}
 	
-	public String getProvinciaSeleccionada() {
+	public Long getProvinciaSeleccionada() {
 		return provinciaSeleccionada;
 	}
-	public void setProvinciaSeleccionada(String provinciaSeleccionada) {
+	public void setProvinciaSeleccionada(Long provinciaSeleccionada) {
 		this.provinciaSeleccionada = provinciaSeleccionada;
 	}
 	

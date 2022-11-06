@@ -32,6 +32,6 @@ public interface CiudadService {
 
 	void deleteByid(Long id);
 
-	void save(Ciudad p);
+	void save(Ciudad c);
 
 }

@@ -3,11 +3,14 @@ package com.tsti.smn.capaPresentacion.personas;
 import java.util.List;
 import java.util.Optional;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
+import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -62,6 +65,8 @@ public class PersonasEditarController {
     	{
     		//FieldError error = new FieldError("formBean","fechaNacimiento","la fecha de nacimiento es incorrecta.");
             //result.addError(error);
+//    		ObjectError error = new ObjectError("globalError", "no puede guardar aún");
+//            result.addError(error);
             
     		if(result.hasErrors())
     		{

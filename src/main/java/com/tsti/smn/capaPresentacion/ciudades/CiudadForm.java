@@ -1,7 +1,6 @@
 package com.tsti.smn.capaPresentacion.ciudades;
 
 import com.tsti.smn.pojos.Ciudad;
-import com.tsti.smn.pojos.Persona;
 
 /**
  * Objeto necesario para insertar o eliminar una persona. 
@@ -10,7 +9,7 @@ import com.tsti.smn.pojos.Persona;
  */
 public class CiudadForm {
 
-
+	private Long id;
 
 //	@NotNull
 //	@Size(min=2, max=30)
@@ -22,10 +21,11 @@ public class CiudadForm {
 	public CiudadForm() {
 		super();
 	}
-	public CiudadForm(Ciudad p) {
+	public CiudadForm(Ciudad c) {
 		super();
-		this.nombre=p.getNombre();
-		this.idProvincia=p.getProvincia().getId();
+		this.id=c.getId();
+		this.nombre=c.getNombre();
+		this.idProvincia=c.getProvincia().getId();
 		
 	}
 	public String getNombre() {
@@ -45,9 +45,17 @@ public class CiudadForm {
 	public Ciudad toPojo()
 	{
 		Ciudad c = new Ciudad();
+		c.setId(this.id);
 		c.setNombre(this.getNombre());
 		return c;
 	}
+	public Long getId() {
+		return id;
+	}
+	public void setId(Long id) {
+		this.id = id;
+	}
+	
 	
 	
 }
