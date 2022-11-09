@@ -19,6 +19,14 @@ public class Ciudad {
 	@ManyToOne
 	private Provincia provincia;
 	
+	public Ciudad() { }
+		
+	public Ciudad(Long id, String nombre) {
+		super();
+		this.id = id;
+		this.nombre = nombre;
+	}
+	
 	
 	public Long getId() {
 		return id;
@@ -38,6 +46,6 @@ public class Ciudad {
 	public void setProvincia(Provincia provincia) {
 		this.provincia = provincia;
 	}
-	
+
 	
 }
